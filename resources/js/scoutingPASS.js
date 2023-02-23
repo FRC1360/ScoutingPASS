@@ -3,6 +3,11 @@
 // The guts of the ScountingPASS application
 // Written by Team 2451 - PWNAGE
 
+if ("serviceWorker" in navigator) {
+  // register service worker
+  navigator.serviceWorker.register("service-worker.js");
+}
+
 document.addEventListener("touchstart", startTouch, false);
 document.addEventListener("touchend", moveTouch, false);
 
