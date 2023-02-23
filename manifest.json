@@ -3,6 +3,10 @@
   "short_name": "Orbit ScoutingPASS",
   "start_url": "index.html",
   "scope": "./",
+  "icons": {
+  "48": "icon.svg",
+  "96": "icon.svg"
+  },
   "theme_color": "#ffd31d",
   "background_color": "#333",
   "display": "standalone"
