@@ -4,8 +4,8 @@
   "start_url": "index.html",
   "scope": "./",
   "icons": {
-  "48": "icon.svg",
-  "96": "icon.svg"
+  "48": "icon.png",
+  "96": "icon.png"
   },
   "theme_color": "#ffd31d",
   "background_color": "#333",
