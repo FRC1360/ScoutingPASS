@@ -9,7 +9,7 @@ var authKey = null;
  */
 function getTeams(eventCode) {
 	if (authKey) {
-		var xmlhttp = new XMLHttpRequest();
+		/*var xmlhttp = new XMLHttpRequest();
 		var url = "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/teams/simple";
 		xmlhttp.open("GET", url, true);
 		xmlhttp.setRequestHeader("X-TBA-Auth-Key", authKey);
@@ -20,7 +20,7 @@ function getTeams(eventCode) {
 			}
 		};
 		// Send request
-		xmlhttp.send();
+		xmlhttp.send();*/
 	}
 }
 
@@ -31,7 +31,7 @@ function getTeams(eventCode) {
  */
 function getSchedule(eventCode) {
 	if (authKey) {
-		var xmlhttp = new XMLHttpRequest();
+		/*var xmlhttp = new XMLHttpRequest();
 		var url = "https://www.thebluealliance.com/api/v3/event/" + eventCode + "/matches/simple";
 		xmlhttp.open("GET", url, true);
 		xmlhttp.setRequestHeader("X-TBA-Auth-Key", authKey);
@@ -42,6 +42,6 @@ function getSchedule(eventCode) {
 			}
 		};
 		// Send request
-		xmlhttp.send();
+		xmlhttp.send();*/
 	}
 }
