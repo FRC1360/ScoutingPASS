@@ -64,6 +64,20 @@ var config_data = `
       "shape": "circle 5 black red true"
     }
   ],
+  "betting": [
+    { "name": "Bet Amount",
+      "code": "ba",
+      "type": "counter"
+    },
+    { "name": "Alliance",
+      "code": "tpu",
+      "type": "radio",
+      "choices": {
+        "s": "Blue<br>",
+        "f": "Red<br>"
+      }
+    }
+  ],
   "auton": [
     { "name": "Leave Starting Zone",
       "code": "al",
