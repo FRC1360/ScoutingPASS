@@ -6,11 +6,11 @@ var config_data = `
   "checkboxAs": "10",
   "betting": [
     {
-      "name": "Member Initials",
+      "name": "Member Name",
       "code": "bm",
       "type": "text",
-      "size": 5,
-      "maxSize": 10,
+      "size": 30,
+      "maxSize": 30,
       "required": "true"
     },
     { "name": "Bet Amount",

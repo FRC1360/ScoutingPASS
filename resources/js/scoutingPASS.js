@@ -710,14 +710,6 @@ function configure() {
     idx = addElement(pmt, idx, element);
   });
 
-  // Configure betting screen
-  var pmc = mydata.betting;
-  var pmt = document.getElementById("betting_table");
-  var idx = 0;
-  pmc.forEach(element => {
-    idx = addElement(pmt, idx, element);
-  });
-
   // Configure auton screen
   var ac = mydata.auton;
   var at = document.getElementById("auton_table");
