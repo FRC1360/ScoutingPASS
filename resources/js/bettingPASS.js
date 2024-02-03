@@ -160,6 +160,20 @@ if ("serviceWorker" in navigator) {
       cell1.setAttribute("title", data.tooltip);
     }
     cell2.classList.add("field");
+
+    var buttonMinus100 = document.createElement("input");
+    buttonMinus100.setAttribute("type", "button");
+    buttonMinus100.setAttribute("id", "minus_" + data.code);
+    buttonMinus100.setAttribute("onclick", "counter(this.parentElement, -100)");
+    buttonMinus100.setAttribute("value", "100-");
+    cell2.appendChild(buttonMinus100);
+
+    var button0 = document.createElement("input");
+    button0.setAttribute("type", "button");
+    button0.setAttribute("id", "minus_" + data.code);
+    button0.setAttribute("onclick", "counter(this.parentElement, -10)");
+    button0.setAttribute("value", "10-");
+    cell2.appendChild(button0);
   
     var button1 = document.createElement("input");
     button1.setAttribute("type", "button");
@@ -190,7 +204,22 @@ if ("serviceWorker" in navigator) {
     button2.setAttribute("onclick", "counter(this.parentElement, 1)");
     button2.setAttribute("value", "+");
     cell2.appendChild(button2);
-  
+
+
+    var button3 = document.createElement("input");
+    button3.setAttribute("type", "button");
+    button3.setAttribute("id", "plus_" + data.code);
+    button3.setAttribute("onclick", "counter(this.parentElement, 10)");
+    button3.setAttribute("value", "10+");
+    cell2.appendChild(button3);
+
+    var buttonAdd100 = document.createElement("input");
+    buttonAdd100.setAttribute("type", "button");
+    buttonAdd100.setAttribute("id", "plus_" + data.code);
+    buttonAdd100.setAttribute("onclick", "counter(this.parentElement, 100)");
+    buttonAdd100.setAttribute("value", "100+");
+    cell2.appendChild(buttonAdd100);
+
     if (data.hasOwnProperty('cycleTimer')) {
       if (data.cycleTimer != "") {
         inp = document.createElement('input');

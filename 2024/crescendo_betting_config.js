@@ -10,7 +10,7 @@ var config_data = `
       "code": "bm",
       "type": "text",
       "size": 5,
-      "maxSize": 5,
+      "maxSize": 10,
       "required": "true"
     },
     { "name": "Bet Amount",
