@@ -10,13 +10,13 @@ var config_data = `
       "type": "scouter",
       "size": 5,
       "maxSize": 5,
-      "required": "false"
+      "required": "true"
     },
     { "name": "Event",
       "code": "e",
       "type": "event",
       "defaultValue": "2023tnkn",
-      "required": "false"
+      "required": "true"
     },
     { "name": "Match Level",
       "code": "l",
@@ -27,14 +27,14 @@ var config_data = `
         "f": "Finals"
       },
       "defaultValue": "qm",
-      "required": "false"
+      "required": "true"
     },
     { "name": "Match #",
       "code": "m",
       "type": "match",
       "min": 1,
       "max": 150,
-      "required": "false"
+      "required": "true"
     },
     { "name": "Robot",
       "code": "r",
@@ -47,7 +47,7 @@ var config_data = `
         "r3": "Red-3",
         "b3": "Blue-3"
       },
-      "required":"false"
+      "required":"true"
     },
     { "name": "Team #",
       "code": "t",
