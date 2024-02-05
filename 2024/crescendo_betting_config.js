@@ -3,10 +3,9 @@ var config_data = `
   "dataFormat": "tsv",
   "title": "Scouting PASS 2024",
   "page_title": "Crescendo",
-  "checkboxAs": "10",
-  "betting": [
-    {
-      "name": "Member Name",
+  "bettingConfig": "true",
+  "prematch": [
+    { "name": "Member Name",
       "code": "bm",
       "type": "text",
       "size": 30,
@@ -26,9 +25,15 @@ var config_data = `
         "s": "Blue<br>",
         "f": "Red<br>"
       } 
-
     }
+  ],
+  "auton": [
+  ],
+  "teleop": [
+  ],
+  "endgame": [
+  ],
+  "postmatch": [
   ]
 }`;
-qr = new QRCode(document.getElementById("qrcode"), options)
 
