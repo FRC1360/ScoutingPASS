@@ -17,6 +17,7 @@ var xThreshold = 0.3;
 var slide = 0;
 var enableGoogleSheets = false;
 var pitScouting = false;
+var betting = false;
 var checkboxAs = 'YN';
 
 // Options
@@ -686,6 +687,12 @@ function configure() {
     }
   }
 
+  if (mydata.hasOwnProperty('bettingConfig')) {
+    if (mydata.bettingConfig.toUpperCase() == 'TRUE'){
+      betting = true;
+    }
+  }
+
   if (mydata.hasOwnProperty('checkboxAs')) {
     // Supported modes
     // YN - Y or N
@@ -802,7 +809,6 @@ function resetRobot() {
     document.getElementById("input_r_b3").checked = false
   }
 }
-
 
 function getLevel() {
   if (document.getElementById("input_l_qm").checked) {
@@ -935,15 +941,20 @@ function getData(useStr) {
 function updateQRHeader() {
   let str = 'Event: !EVENT! Match: !MATCH! Robot: !ROBOT! Team: !TEAM!';
 
-  if (!pitScouting) {
+  if (!pitScouting && !betting) {
     str = str
       .replace('!EVENT!', document.getElementById("input_e").value)
       .replace('!MATCH!', document.getElementById("input_m").value)
       .replace('!ROBOT!', document.getElementById("display_r").value)
       .replace('!TEAM!', document.getElementById("input_t").value);
-  } else {
+  } else if (pitScouting) {
     str = 'Pit Scouting - Team !TEAM!'
       .replace('!TEAM!', document.getElementById("input_t").value);
+  } else if (betting) {
+    str = 'Member Name: !MEMBER_NAME! Bet Amount: !BET_AMOUNT! Alliance: !ALLIANCE!'
+      .replace('!MEMBER_NAME!', document.getElementById("input_bm").value)
+      .replace('!BET_AMOUNT!', document.getElementById("input_ba").value)
+      .replace('!ALLIANCE!', document.getElementById("display_ae").value)
   }
 
   document.getElementById("display_qr-info").textContent = str;
@@ -952,7 +963,7 @@ function updateQRHeader() {
 
 function qr_regenerate() {
   // Validate required pre-match date (event, match, level, robot, scouter)
-  if (!pitScouting) {  
+  if (!pitScouting && !betting) {  
     if (validateData() == false) {
       // Don't allow a swipe until all required data is filled in
       return false
@@ -977,7 +988,7 @@ function clearForm() {
   var match = 0;
   var e = 0;
 
-  if (pitScouting) {
+  if (pitScouting || betting) {
     swipePage(-1);
   } else {
     swipePage(-5);

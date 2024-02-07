@@ -18,12 +18,12 @@ var config_data = `
       "required": "true"
     },
     { "name": "Alliance",
-      "code": "tpu",
+      "code": "ae",
       "type": "radio",
       "required": "true",
       "choices": {
-        "s": "Blue<br>",
-        "f": "Red<br>"
+        "blue": "Blue<br>",
+        "red": "Red<br>"
       } 
     }
   ],
