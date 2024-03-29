@@ -25,6 +25,21 @@ var config_data = `
         "Blue": "Blue<br>",
         "Red": "Red<br>"
       } 
+    },
+    { "name": "Match Number",
+      "code": "mn",
+      "type": "counter",
+      "required": "true"
+    },
+    { "name": "Competition",
+      "code": "cp",
+      "type": "radio",
+      "required": "true",
+      "choices": {
+        "Durham2024": "Durham2024<br>",
+        "Waterloo2024": "Waterloo2024<br>",
+        "DCMP2024": "DCMP2024<br>"
+      }
     }
   ],
   "auton": [
