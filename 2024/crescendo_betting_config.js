@@ -22,8 +22,8 @@ var config_data = `
       "type": "radio",
       "required": "true",
       "choices": {
-        "Blue": "Blue<br>",
-        "Red": "Red<br>"
+        "blue": "Blue<br>",
+        "red": "Red<br>"
       } 
     },
     { "name": "Match Number",
