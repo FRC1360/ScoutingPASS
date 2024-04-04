@@ -951,12 +951,10 @@ function updateQRHeader() {
     str = 'Pit Scouting - Team !TEAM!'
       .replace('!TEAM!', document.getElementById("input_t").value);
   } else if (betting) {
-    str = 'Member Name: !MEMBER_NAME! Bet Amount: !BET_AMOUNT! Alliance: !ALLIANCE! Match Number: !MATCH_NUMBER! Competition: !COMPETITION!'
+    str = 'Member Name: !MEMBER_NAME! Bet Amount: !BET_AMOUNT! Alliance: !ALLIANCE!'
       .replace('!MEMBER_NAME!', document.getElementById("input_bm").value)
       .replace('!BET_AMOUNT!', document.getElementById("input_ba").value)
       .replace('!ALLIANCE!', document.getElementById("display_ae").value)
-      .replace('!MATCH_NUMBER!', document.getElementById("input_mn").value)
-      .replace('!COMPETITION!', document.getElementById("input_cp").value);
   }
 
   document.getElementById("display_qr-info").textContent = str;
