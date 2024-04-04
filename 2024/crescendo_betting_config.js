@@ -22,8 +22,8 @@ var config_data = `
       "type": "radio",
       "required": "true",
       "choices": {
-        "blue": "Blue<br>",
-        "red": "Red<br>"
+        "Blue": "Blue<br>",
+        "Red": "Red<br>"
       } 
     }
   ],
